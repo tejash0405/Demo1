@@ -1,0 +1,15 @@
+<div class="container">
+    <div>
+      User Name : <input type="text"  oninvalid="alert('You must fill out the form!');"   name="username" [(ngModel)]="username" required="">
+      <br>
+      <br>
+      Password : <input type="password"  oninvalid ="alert('You must fill out the form!');" name="password" [(ngModel)]="password" required="">
+    </div>
+    <br>
+    <br>
+    <button (click)=checkLogin() class="btn btn-success">
+      Login
+    </button>
+  </div>
+
+  

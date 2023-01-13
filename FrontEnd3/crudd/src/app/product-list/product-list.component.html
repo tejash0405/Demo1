@@ -1,0 +1,38 @@
+<h2> Product  List</h2>
+<table class = "table table-striped">
+    <thead>
+        <tr>
+            <th> Product Description</th>
+            <th> Product Name </th>
+            <th> Product Price</th>
+            <th> Actions </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let employee of employees" >
+            <td> {{ employee.productName }} </td>
+            <td> {{ employee.productDesc }} </td>
+            <td> {{ employee.productPrice }} </td>
+            <td>
+                <button (click) = "updateProduct(employee.productId)" class = "btn btn-info"> Update</button>
+                <button (click) = "deleteProduct(employee.productId)" class = "btn btn-danger" style="margin-left: 10px"> Delete</button>
+                <button (click) = "productDetails(employee.productId)" class = "btn btn-warning" style="margin-left: 10px"> View</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<!-- <button type="button" class="btn btn-success" (click)="goToAddProduct()">Add</button> -->
+<br>
+
+<button type="submit"><a href="http://localhost:8080/export-to-excel"> <button type="button" class="btn btn-primary"><span class="bi bi-download"></span> Download Menu </button></a></button>
+    <br>
+    <br>     
+
+    <input type="file"(change)="getFile($event)"/> <br/>
+    <br>
+    <input type="button" (click)="submitData()" value="UploadFile"/> 
+
+    <br>
+   
+
+
